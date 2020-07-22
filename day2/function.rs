@@ -7,6 +7,10 @@ fn main() {
 	func2(y);
 
 	func3(x);
+
+	let (s, len) = calcu_len("hellow world!");
+
+	println!("str: {}, len {}", s, len);
 }
 
 fn func1(x: i32) -> i32 {
@@ -26,4 +30,9 @@ fn func3(x: i32) {
 	} else {
 		println!("if is false!");
 	}
+}
+
+fn calcu_len(s: &str) ->(&str, usize)
+{
+	(s, s.len())
 }

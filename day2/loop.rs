@@ -6,6 +6,7 @@ fn main()
 
 	test_for1();
 	test_for2();
+	test_for3();
 }
 
 /* equal to while(1)*/
@@ -46,7 +47,15 @@ fn test_for1()
 fn test_for2()
 {
 	for num in (1..=4).rev() {
-		println!("the for num is {}", num);
+		println!("the for2 num is {}", num);
+	}
+
+}
+
+fn test_for3()
+{
+	for num in (1..4).rev() {
+		println!("the for3 num is {}", num);
 	}
 
 }
