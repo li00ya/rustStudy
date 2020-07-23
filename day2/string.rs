@@ -19,7 +19,8 @@ fn main()
 
 	let s = first_word(&s3);
 
-	println!("first word: {}", s);
+	let c = strchr(&s3, 2);
+	println!("first word: {}, strstr is {}", s, c);
 }
 
 fn takesowner(s: String) -> usize
@@ -43,4 +44,11 @@ fn first_word(s: &String) -> &str
 	}
 
 	return &s[..];
+}
+
+fn strchr(s: &String, i: usize)->char
+{
+	let bytes = s.as_bytes();
+
+	return bytes[i] as char;
 }
